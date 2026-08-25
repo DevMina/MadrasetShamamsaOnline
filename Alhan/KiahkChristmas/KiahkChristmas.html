@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ألحان كيهك والميلاد - مدرسة شمامسة أونلاين</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="../../css/site.css" />
+  <meta name="description" content="ألحان ومدائح شهر كيهك وعيد الميلاد المجيد"/>
+  <meta property="og:title" content="ألحان كيهك والميلاد المجيد"/>
+  <meta property="og:description" content="ألحان ومدائح شهر كيهك وعيد الميلاد المجيد"/>
+  <meta property="og:type" content="website"/>
+  <meta name="theme-color" content="#0d6efd"/>
+  <link rel="icon" href="../../favicon.svg" type="image/svg+xml"/>
+</head>
+<body dir="rtl">
+<nav aria-label="breadcrumb" class="bg-white border-bottom px-3 py-2">
+  <div class="container">
+    <ol class="breadcrumb mb-0 small">
+      <li class="breadcrumb-item"><a href="../../index.html" class="text-decoration-none">الرئيسية</a></li>
+      <li class="breadcrumb-item"><a href="../AlhanList.html" class="text-decoration-none">الألحان</a></li>
+      <li class="breadcrumb-item active">ألحان كيهك والميلاد</li>
+    </ol>
+  </div>
+</nav>
+
+<section class="py-3 text-center bg-light">
+  <div class="container">
+    <h1 class="mb-3">ألحان كيهك والميلاد</h1>
+    <p class="lead text-muted">ألحان ومدائح شهر كيهك، برمون عيد الميلاد، وعيد الميلاد المجيد</p>
+  </div>
+</section>
+
+<section class="py-3">
+  <div class="container">
+    <div class="accordion" id="sectionsAccordion"></div>
+  </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../../js/layout.js"></script>
+<script>
+initLayout('ألحان كيهك والميلاد');
+
+const sections = [
+  {id:'1', name:'رفع بخور عشية وباكر شهر كيهك'},
+  {id:'2', name:'ألحان ومردات قداس شهر كيهك'},
+  {id:'3', name:'ألحان ومدائح توزيع شهر كيهك'},
+  {id:'4', name:'رفع بخور عشية وباكر برمون الميلاد'},
+  {id:'5', name:'ألحان ومردات قداس برمون الميلاد'},
+  {id:'6', name:'ألحان ومدائح توزيع برمون الميلاد'},
+  {id:'7', name:'رفع بخور عشية وباكر عيد الميلاد'},
+  {id:'8', name:'ألحان ومردات قداس عيد الميلاد'},
+  {id:'9', name:'ألحان ومدائح توزيع عيد الميلاد'},
+];
+
+const items = [
+  // Section 1
+  {s:'1', name:'أرباع الناقوس شهر كيهك',    href:'Kiahk/RafaeBokhor/ArbaeElnakosKiahk.html'},
+  {s:'1', name:'ذكصولوجيات شهر كيهك',        href:'Kiahk/RafaeBokhor/ZoksologiatKiahk.html'},
+  {s:'1', name:'المزمور والإنجيل شهر كيهك',  href:'Kiahk/RafaeBokhor/MazmorEngelKiahk.html'},
+  {s:'1', name:'الختام شهر كيهك',            href:'Kiahk/RafaeBokhor/ElkhetamKiahk.html'},
+  // Section 2
+  {s:'2', name:'الهيتينيات شهر كيهك',        href:'Kiahk/Kodas/HetanyatKiahk.html'},
+  {s:'2', name:'مرد الإبركسيس شهر كيهك',    href:'Kiahk/Kodas/EbraksisKiahk.html'},
+  {s:'2', name:'المزمور والإنجيل قداس كيهك', href:'Kiahk/Kodas/MazmorEngelKiahkKodas.html'},
+  {s:'2', name:'اسبازموس واطس شهر كيهك',    href:'Kiahk/Kodas/AsbazmosWatosKiahk.html'},
+  {s:'2', name:'اسبازموس آدام شهر كيهك',    href:'Kiahk/Kodas/AsbazmosAdamKiahk.html'},
+  {s:'2', name:'ميخائيل شهر كيهك',          href:'Kiahk/Kodas/MehyarKiahk.html'},
+  // Section 3
+  {s:'3', name:'التوزيع',                    href:'Kiahk/Tawzie/TawzieKiahk.html'},
+  {s:'3', name:'جي إف إسماروؤت',            href:'Kiahk/Tawzie/JeEfEsmarootKiahk.html'},
+  {s:'3', name:'توزيع أيام كيهك',           href:'Kiahk/Tawzie/TawzieAyamKiahk.html'},
+  {s:'3', name:'توزيع آحاد كيهك',           href:'Kiahk/Tawzie/TawzieAhadKiahk.html'},
+  {s:'3', name:'الختام التوزيع',             href:'Kiahk/Tawzie/ElkhetamTawzieKiahk.html'},
+  // Sections 4-9 coming soon
+  {s:'4', name:'أرباع الناقوس برمون الميلاد', href:null},
+  {s:'4', name:'ذكصولوجيات برمون الميلاد',   href:null},
+  {s:'7', name:'أرباع الناقوس عيد الميلاد',  href:null},
+  {s:'7', name:'ذكصولوجيات عيد الميلاد',     href:null},
+  {s:'7', name:'المزمور والإنجيل عيد الميلاد',href:null},
+  {s:'7', name:'الختام عيد الميلاد',          href:null},
+];
+
+const acc = document.getElementById('sectionsAccordion');
+sections.forEach((sec, i) => {
+  const secItems = items.filter(x => x.s === sec.id);
+  const isFirst = i === 0;
+  const hasLinked = secItems.some(x => x.href);
+  const badge = (!hasLinked && secItems.length === 0) || (!hasLinked)
+    ? '<span class="badge bg-secondary ms-2" style="font-size:0.7rem">قريباً</span>' : '';
+  const cardsHtml = secItems.length
+    ? `<div class="row g-4">${secItems.map(item =>
+        item.href
+          ? `<div class="col-md-4"><a href="${item.href}" class="text-decoration-none"><div class="card text-center h-100 shadow-sm card-hover"><div class="card-body"><h5 class="mb-0 text-dark">${item.name}</h5></div></div></a></div>`
+          : `<div class="col-md-4"><div class="card text-center h-100 shadow-sm"><div class="card-body"><h5 class="mb-0 text-dark">${item.name}</h5><small class="text-muted">قريباً</small></div></div></div>`
+      ).join('')}</div>`
+    : `<p class="text-muted mb-0">قريباً</p>`;
+  acc.innerHTML += `
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button ${!isFirst ? 'collapsed' : ''}" type="button"
+                data-bs-toggle="collapse" data-bs-target="#sec${sec.id}" aria-expanded="${isFirst}">
+          <i class="fa-solid fa-cross mx-2"></i>${sec.name}${badge}
+        </button>
+      </h2>
+      <div id="sec${sec.id}" class="accordion-collapse collapse ${isFirst ? 'show' : ''}">
+        <div class="accordion-body">${cardsHtml}</div>
+      </div>
+    </div>`;
+});
+</script>
+</body>
+</html>
