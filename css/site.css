@@ -328,3 +328,10 @@ footer.footer {
     .data-card { padding: 1rem; }
     .btn-lg { width: 100%; margin-bottom: 0.5rem; }
 }
+
+/* Table cell text wrapping */
+td {
+    word-break: break-word;
+    overflow-wrap: break-word;
+    max-width: 0;
+}
