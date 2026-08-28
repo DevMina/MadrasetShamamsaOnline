@@ -40,62 +40,11 @@
 initLayout('ألحان صوم نينوى والصوم الكبير');
 const sections = [
   {id:'1', name:'رفع بخور عشية وباكر'},
-  {id:'2', name:'ألحان قداس الموعوظين'},
-  {id:'3', name:'ألحان ومردات القداس الباسيلي'},
-  {id:'4', name:'ألحان ومدائح التوزيع'},
 ];
 const items = [
-  // Section 1 — ElSoomElKber specific pages
-  {s:'1', name:'الذكصولوجيات',               href:'RafaeBokhor/ZoksologiatElSoomElKber.html'},
-  {s:'1', name:'مردات الإنجيل',              href:'RafaeBokhor/MaradElEngelElSoomElKber.html'},
-  {s:'1', name:'الختام',                     href:'RafaeBokhor/ElkhetamElSoomElKber.html'},
-  // Section 2 — same KodasMawozen pages as Sanawy
-  {s:'2', name:'لحن البركة',                 href:'../Sanawy/KodasMawozen/LahnAlbaraka.html'},
-  {s:'2', name:'لحن إك إسماروؤت',           href:null},
-  {s:'2', name:'لحن إفلوجيمنوس',            href:null},
-  {s:'2', name:'لحن إبؤرو',                 href:'../Sanawy/KodasMawozen/LahnEbooro.html'},
-  {s:'2', name:'لحن اللي القربان + آبيناف شوبي', href:'../Sanawy/KodasMawozen/LahnAllyAbinaf.html'},
-  {s:'2', name:'أوشية القرابين',             href:'../Sanawy/KodasMawozen/OshytElKarabin.html'},
-  {s:'2', name:'لحن الليلويا',              href:'Kodas/LahnAlleloya.html'},
-  {s:'2', name:'إسباتير',                   href:'../Sanawy/KodasMawozen/Esbater.html'},
-  {s:'2', name:'صلاة الشكر',                href:'../Sanawy/KodasMawozen/SalatElShokrKodas.html'},
-  {s:'2', name:'لحن سوتيس آمين + ني صافيف', href:'../Sanawy/KodasMawozen/SotesNeSavef.html'},
-  {s:'2', name:'لحن طاي شوري + تي شوري',    href:'../Sanawy/KodasMawozen/TayShoryTeShory.html'},
-  {s:'2', name:'الهيتينيات',                href:'Kodas/Hetanyat.html'},
-  {s:'2', name:'البولس قبطي',               href:'../Sanawy/KodasMawozen/BolesCoptic.html'},
-  {s:'2', name:'بي إهموت غار',              href:'../Sanawy/KodasMawozen/BeEhmotGhar.html'},
-  {s:'2', name:'مرد الكاثوليكون',           href:'../Sanawy/KodasMawozen/Katholikon.html'},
-  {s:'2', name:'الكاثوليكون قبطي',          href:'../Sanawy/KodasMawozen/KatholikonCoptic.html'},
-  {s:'2', name:'مرد الإبركسيس',             href:'Kodas/Ebraksis.html'},
-  {s:'2', name:'الإبركسيس قبطي',            href:'../Sanawy/KodasMawozen/EbraksisCoptic.html'},
-  {s:'2', name:'المزمور والإنجيل',          href:'../Sanawy/KodasMawozen/MazmorEngel.html'},
-  {s:'2', name:'الأواشي بعد الإنجيل',       href:'../Sanawy/KodasMawozen/AwashyKodasMawozen.html'},
-  {s:'2', name:'قانون الإيمان',             href:'../Sanawy/KodasMawozen/KanonElEman.html'},
-  {s:'2', name:'مرد إنجيل القداس',          href:'Kodas/MaradEngelKodasElSoomElKber.html'},
-  {s:'2', name:'اسبازموس واطس',             href:'Kodas/AsbazmosWatosElsoomElKber.html'},
-  {s:'2', name:'اسبازموس آدام',             href:'Kodas/AsbazmosAdamElsoomElKber.html'},
-  {s:'2', name:'سوتيس نيفسنتي',            href:'Kodas/SotesNefsenty.html'},
-  {s:'2', name:'إنسو تي تي شوري',           href:'Kodas/EnsoTeTeShory.html'},
-  // Section 3 — same KodasBasily pages as Sanawy
-  {s:'3', name:'صلاة الصلح',               href:'../Sanawy/KodasBasily/SalatElSolhBasily.html'},
-  {s:'3', name:'اسبازموس إفرحي يا مريم',   href:'../Sanawy/KodasBasily/EfrahyYaMariam.html'},
-  {s:'3', name:'قبلوا بعضكم بعضاً',         href:'../Sanawy/KodasBasily/Kabelo.html'},
-  {s:'3', name:'هيتين ني إبريسفيا + مستحق وعادل', href:'../Sanawy/KodasBasily/HetenNeEbresviaBasily.html'},
-  {s:'3', name:'اسبازموس أيها الرب',        href:'../Sanawy/KodasBasily/AyohaElRab.html'},
-  {s:'3', name:'تسبحة الشاروبيم',           href:'../Sanawy/KodasBasily/TasbehatElSharobem.html'},
-  {s:'3', name:'مردات حتى الأواشي',         href:'../Sanawy/KodasBasily/MaradatToAwashy.html'},
-  {s:'3', name:'الأواشي',                   href:'../Sanawy/KodasBasily/AwashyKodas.html'},
-  {s:'3', name:'المجمع والترحيم',           href:'../Sanawy/KodasBasily/MagmaeTarhem.html'},
-  {s:'3', name:'القسمة',                    href:'../Sanawy/KodasBasily/Kesma.html'},
-  {s:'3', name:'الإعتراف',                  href:'../Sanawy/KodasBasily/Eatraf.html'},
-  // Section 4 — ElSoomElKber specific + shared Tawzie
-  {s:'4', name:'إك إسماروؤت',              href:'Tawzie/EkEsmaroot.html'},
-  {s:'4', name:'بي أويك',                  href:'Tawzie/BeOik.html'},
-  {s:'4', name:'مديح اسمعوا يا شعب المسيح', href:'Tawzie/EsmaaoYaShaabElMaseh.html'},
-  {s:'4', name:'مديح المجد لمن رفع السموات', href:'Tawzie/ElMagdLeManRafaaElSamawat.html'},
-  {s:'4', name:'مديح أبانا الذي في السموات', href:'Tawzie/AbanaElLazy.html'},
-  {s:'4', name:'التوزيع',                   href:'Tawzie/TawzieElSoomElKber.html'},
-  {s:'4', name:'الختام',                    href:'Tawzie/ElkhetamTawzie.html'},
+  {s:'1', name:'الذكصولوجيات',  href:'RafaeBokhor/ZoksologiatElSoomElKber.html'},
+  {s:'1', name:'مردات الإنجيل', href:'RafaeBokhor/MaradElEngelElSoomElKber.html'},
+  {s:'1', name:'الختام',        href:'RafaeBokhor/ElkhetamElSoomElKber.html'},
 ];
 const acc = document.getElementById('sectionsAccordion');
 sections.forEach((sec, i) => {
@@ -114,7 +63,7 @@ sections.forEach((sec, i) => {
           <i class="fa-solid fa-cross mx-2"></i>${sec.name}
         </button>
       </h2>
-      <div id="sec${sec.id}" class="accordion-collapse collapse ${isFirst?'show':''}">
+      <div id="sec${sec.id}" class="accordion-collapse collapse ${isFirst?'show':''}" data-bs-parent="#sectionsAccordion" data-bs-parent="#sectionsAccordion">
         <div class="accordion-body"><div class="row g-4">${cardsHtml}</div></div>
       </div>
     </div>`;
