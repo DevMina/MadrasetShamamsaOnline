@@ -121,7 +121,7 @@
       <h5 class="text-center mb-4">أي تعليق أو اقتراح هيفيدنا جداً</h5>
       <div class="row">
         <div class="col-md-7 mx-auto">
-          <form onsubmit="handleContact(event)">
+          <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" onsubmit="handleContact(event)">
             <div class="mb-3">
               <label class="form-label"><i class="bi bi-person-fill mx-2 text-primary"></i>الاسم</label>
               <input type="text" name="name" class="form-control" required />
@@ -139,6 +139,9 @@
               <textarea name="message" class="form-control" rows="5" required></textarea>
             </div>
             <button type="submit" class="btn btn-outline-primary mt-auto">إرسال</button>
+            <small class="text-muted mt-2 d-block">
+              لتفعيل إرسال النماذج، استبدل YOUR_FORM_ID في الكود بمعرّف Formspree الخاص بك
+            </small>
           </form>
         </div>
       </div>
@@ -160,9 +163,15 @@
   document.getElementById('coptic-date').textContent = window._copticDate || '';
 
   function handleContact(e) {
-    e.preventDefault();
-    alert('شكراً لتواصلك معنا! سنرد عليك في أقرب وقت.');
-    e.target.reset();
+    // Allow native form submission to Formspree if action is set
+    const action = e.target.action || '';
+    if (action.includes('YOUR_FORM_ID')) {
+      // Formspree not configured yet — show message
+      e.preventDefault();
+      alert('شكراً لتواصلك معنا! سنرد عليك في أقرب وقت.');
+      e.target.reset();
+    }
+    // Otherwise let form submit naturally to configured endpoint
   }
 </script>
 </body>

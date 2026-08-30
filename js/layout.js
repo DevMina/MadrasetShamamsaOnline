@@ -4,7 +4,11 @@
  */
 function initLayout(title) {
   // Compute relative root from current path depth
-  const depth = (location.pathname.match(/\//g) || []).length - 1;
+  // Robust root calculation: count path segments, handle trailing slash & /index.html
+  let pathname = location.pathname.replace(/\/index\.html$/, '/');
+  if (!pathname.endsWith('/')) pathname = pathname.substring(0, pathname.lastIndexOf('/') + 1);
+  const segments = pathname.split('/').filter(Boolean);
+  const depth = segments.length;
   const root = depth <= 0 ? '.' : Array(depth).fill('..').join('/');
 
   // Coptic date (simple JS implementation)
