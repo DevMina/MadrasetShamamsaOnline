@@ -6,28 +6,6 @@ function initLayout(title) {
     // Calculate path relative to the GitHub Pages site root
     const siteRoot = '/MadrasetShamamsaOnline';
 
-    let pathname = location.pathname;
-
-    // Remove site root
-    if (pathname.startsWith(siteRoot)) {
-        pathname = pathname.substring(siteRoot.length);
-    }
-
-    // Normalize index.html
-    pathname = pathname.replace(/\/index\.html$/, '/');
-
-    // Ensure trailing slash
-    if (!pathname.endsWith('/')) {
-        pathname = pathname.substring(0, pathname.lastIndexOf('/') + 1);
-    }
-
-    const segments = pathname.split('/').filter(Boolean);
-    const depth = segments.length;
-
-    const root = depth === 0
-        ? siteRoot
-        : siteRoot + '/' + Array(depth).fill('..').join('/');
-
     const copticDate = getCopticDate(new Date());
 
     const navbar = `
@@ -39,7 +17,7 @@ function initLayout(title) {
     <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
       <div class="container-fluid">
 
-        <a class="navbar-brand" href="${root}/index.html">
+        <a class="navbar-brand" href="${siteRoot}/index.html">
           مدرسة شمامسة أونلاين
         </a>
 
@@ -58,7 +36,7 @@ function initLayout(title) {
 
             <li class="nav-item">
               <a class="nav-link text-dark"
-                 href="${root}/Alhan/AlhanList.html">
+                 href="${siteRoot}/Alhan/AlhanList.html">
                 <i class="fas fa-lg fa-headphones text-primary"></i>
                 ألحان
               </a>
@@ -66,7 +44,7 @@ function initLayout(title) {
 
             <li class="nav-item">
               <a class="nav-link text-dark"
-                 href="${root}/EilomElKanesa/EilomElKanesa.html">
+                 href="${siteRoot}/EilomElKanesa/EilomElKanesa.html">
                 <i class="fas fa-lg fa-church text-primary"></i>
                 علوم كنسية
               </a>
