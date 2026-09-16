@@ -10,7 +10,7 @@ function initLayout(title) {
     const copticDate = getCopticDate(new Date());
 
     const navbar = `
-    < header >
+    <header>
     <div class="beta-banner bg-primary text-white fw-bold fs-5">
       🚀 تشغيل تجريبي الموقع مازال قيد التطوير 🚀
     </div>
@@ -57,14 +57,14 @@ function initLayout(title) {
         </div>
       </div>
     </nav>
-  </header > `;
+  </header> `;
 
     const footer = `
-    < footer class="border-top footer text-muted position-relative" >
+    <footer class="border-top footer text-muted position-relative">
         <div class="position-relative">
             &copy; 2025 - مدرسة شمامسة أونلاين
         </div>
-  </footer > `;
+  </footer> `;
 
     // Set page title
     document.title =
