@@ -3,13 +3,14 @@
  * Call initLayout(title) at the top of each page's inline script.
  */
 function initLayout(title) {
-    // Calculate path relative to the GitHub Pages site root
+    // GitHub Pages project site root
     const siteRoot = '/MadrasetShamamsaOnline';
 
+    // Coptic date
     const copticDate = getCopticDate(new Date());
 
     const navbar = `
-  <header>
+    < header >
     <div class="beta-banner bg-primary text-white fw-bold fs-5">
       🚀 تشغيل تجريبي الموقع مازال قيد التطوير 🚀
     </div>
@@ -32,6 +33,7 @@ function initLayout(title) {
         </button>
 
         <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+
           <ul class="navbar-nav flex-grow-1">
 
             <li class="nav-item">
@@ -51,48 +53,57 @@ function initLayout(title) {
             </li>
 
           </ul>
+
         </div>
       </div>
     </nav>
-  </header>`;
+  </header > `;
 
     const footer = `
-  <footer class="border-top footer text-muted position-relative">
-    <div class="position-relative">
-      &copy; 2025 - مدرسة شمامسة أونلاين
-    </div>
-  </footer>`;
+    < footer class="border-top footer text-muted position-relative" >
+        <div class="position-relative">
+            &copy; 2025 - مدرسة شمامسة أونلاين
+        </div>
+  </footer > `;
 
-    document.title = (title ? title + ' - ' : '') + 'مدرسة شمامسة أونلاين';
+    // Set page title
+    document.title =
+        (title ? title + ' - ' : '') +
+        'مدرسة شمامسة أونلاين';
 
+    // Inject navbar
     document.body.insertAdjacentHTML('afterbegin', navbar);
     document.body.insertAdjacentHTML('beforeend', footer);
 
+    // Expose values
     window._copticDate = copticDate;
-    window._rootPath = root;
+    window._rootPath = siteRoot;
 
+    // Active nav link highlighting
     document.addEventListener('DOMContentLoaded', function () {
         const path = location.pathname;
 
         document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
             const href = link.getAttribute('href') || '';
 
-            if (href && href !== '#') {
-                if (
-                    href.includes('/Alhan/') &&
-                    path.includes('/Alhan/')
-                ) {
-                    link.classList.add('active', 'fw-bold');
-                    link.style.color = '#0d6efd';
-                }
+            if (!href || href === '#') {
+                return;
+            }
 
-                if (
-                    href.includes('/EilomElKanesa/') &&
-                    path.includes('/EilomElKanesa/')
-                ) {
-                    link.classList.add('active', 'fw-bold');
-                    link.style.color = '#0d6efd';
-                }
+            if (
+                href.includes('/Alhan/') &&
+                path.includes('/MadrasetShamamsaOnline/Alhan/')
+            ) {
+                link.classList.add('active', 'fw-bold');
+                link.style.color = '#0d6efd';
+            }
+
+            if (
+                href.includes('/EilomElKanesa/') &&
+                path.includes('/MadrasetShamamsaOnline/EilomElKanesa/')
+            ) {
+                link.classList.add('active', 'fw-bold');
+                link.style.color = '#0d6efd';
             }
         });
     });
