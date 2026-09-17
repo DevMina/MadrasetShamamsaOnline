@@ -55,7 +55,7 @@
             // Section 1 — رفع بخور كيهك (have built pages)
             { s: '1', name: 'ارباع الناقوس شهر كيهك', href: 'Kiahk/RafaeBokhor/ArbaeElnakosKiahk.html' },
             { s: '1', name: 'ذكصولوجيات شهر كيهك', href: 'Kiahk/RafaeBokhor/ZoksologiatKiahk.html' },
-            { s: '1', name: 'المزمور والإنجيل شهر كيهك', href: null },
+            { s: '1', name: 'المزمور والإنجيل شهر كيهك', href: 'Kiahk/RafaeBokhor/MazmorEngelKiahk.html' },
             { s: '1', name: 'الختام شهر كيهك', href: 'Kiahk/RafaeBokhor/ElkhetamKiahk.html' },
             // Section 2 — قداس كيهك (have built pages)
             { s: '2', name: 'هيتينيات شهر كيهك', href: 'Kiahk/Kodas/HetanyatKiahk.html' },
@@ -67,8 +67,8 @@
             // Section 3 — توزيع كيهك (no content built)
             { s: '3', name: 'توزيع شهر كيهك', href: 'Kiahk/Tawzie/TawzieKiahk.html' },
             { s: '3', name: 'جي افسماروؤت شهر كيهك', href: 'Kiahk/Tawzie/JeEfEsmarootKiahk.html' },
-            { s: '3', name: 'توزيع الايام كيهك: تي بارثينوس ماريام', href: null },
-            { s: '3', name: 'توزيع احاد كيهك: اف امبشا غار', href: null },
+            { s: '3', name: 'توزيع الايام كيهك: تي بارثينوس ماريام', href: 'Kiahk/Tawzie/TawzieAyyamKiahk.html' },
+            { s: '3', name: 'توزيع احاد كيهك: اف امبشا غار', href: 'Kiahk/Tawzie/TawzieAhadKiahk.html' },
             { s: '3', name: 'الختام شهر كيهك', href: 'Kiahk/Tawzie/ElkhetamTawzieKiahk.html' },
             // Sections 4-9: no content built yet
             { s: '4', name: 'ارباع الناقوس برمون الميلاد', href: null },
@@ -89,17 +89,17 @@
                     : `<div class="col-md-4"><div class="card text-center h-100 shadow-sm card-hover"><div class="card-body"><h5 class="mb-0 text-dark">${item.name}</h5><small class="text-muted">قريباً</small></div></div></div>`
             ).join('');
             acc.innerHTML += `
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button class="accordion-button ${!isFirst ? 'collapsed' : ''}" type="button"
-                    data-bs-toggle="collapse" data-bs-target="#sec${sec.id}" aria-expanded="${isFirst}">
-              <i class="fa-solid fa-cross mx-2"></i>${sec.name}
-            </button>
-          </h2>
-          <div id="sec${sec.id}" class="accordion-collapse collapse ${isFirst ? 'show' : ''}" data-bs-parent="#sectionsAccordion" data-bs-parent="#sectionsAccordion">
-            <div class="accordion-body"><div class="row g-4">${cardsHtml}</div></div>
-          </div>
-        </div>`;
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button ${!isFirst ? 'collapsed' : ''}" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#sec${sec.id}" aria-expanded="${isFirst}">
+                  <i class="fa-solid fa-cross mx-2"></i>${sec.name}
+                </button>
+              </h2>
+              <div id="sec${sec.id}" class="accordion-collapse collapse ${isFirst ? 'show' : ''}" data-bs-parent="#sectionsAccordion" data-bs-parent="#sectionsAccordion">
+                <div class="accordion-body"><div class="row g-4">${cardsHtml}</div></div>
+              </div>
+            </div>`;
         });
     </script>
 </body>
