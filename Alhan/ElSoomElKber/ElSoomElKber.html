@@ -70,21 +70,21 @@
             const isFirst = i === 0;
             const cardsHtml = secItems.map(item =>
                 item.href
-                    ? `<div class="col-md-4"><a href="${item.href}" class="text-decoration-none"><div class="card text-center h-100 shadow-sm card-hover" style="border:2px solid #0d6efd"><div class="card-body"><h5 class="mb-0 text-primary">${item.name}</h5></div></div></a></div>`
-                    : `<div class="col-md-4"><div class="card text-center h-100 shadow-sm" style="opacity:.55"><div class="card-body"><h5 class="mb-0 text-muted">${item.name}</h5><span class="badge bg-secondary mt-1">قريباً</span></div></div></div>`
+                    ? `<div class="col-md-4"><a href="${item.href}" class="text-decoration-none"><div class="card text-center h-100 shadow-sm card-hover"><div class="card-body"><h5 class="mb-0 text-dark">${item.name}</h5></div></div></a></div>`
+                    : `<div class="col-md-4"><div class="card text-center h-100 shadow-sm card-hover"><div class="card-body"><h5 class="mb-0 text-dark">${item.name}</h5><small class="text-muted">قريباً</small></div></div></div>`
             ).join('');
             acc.innerHTML += `
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button ${!isFirst ? 'collapsed' : ''}" type="button"
-                        data-bs-toggle="collapse" data-bs-target="#sec${sec.id}" aria-expanded="${isFirst}">
-                  <i class="fa-solid fa-cross mx-2"></i>${sec.name}
-                </button>
-              </h2>
-              <div id="sec${sec.id}" class="accordion-collapse collapse ${isFirst ? 'show' : ''}" data-bs-parent="#sectionsAccordion" data-bs-parent="#sectionsAccordion">
-                <div class="accordion-body"><div class="row g-4">${cardsHtml}</div></div>
-              </div>
-            </div>`;
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button ${!isFirst ? 'collapsed' : ''}" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#sec${sec.id}" aria-expanded="${isFirst}">
+              <i class="fa-solid fa-cross mx-2"></i>${sec.name}
+            </button>
+          </h2>
+          <div id="sec${sec.id}" class="accordion-collapse collapse ${isFirst ? 'show' : ''}" data-bs-parent="#sectionsAccordion" data-bs-parent="#sectionsAccordion">
+            <div class="accordion-body"><div class="row g-4">${cardsHtml}</div></div>
+          </div>
+        </div>`;
         });
     </script>
 </body>
