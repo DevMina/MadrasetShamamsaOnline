@@ -28,6 +28,7 @@
     --font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     --base-font-size: 14px;
     --large-font-size: 16px;
+    --content-table-font-size: 20pt;
     --spacing-small: 0.9rem;
     --spacing-medium: 1.1rem;
     --spacing-large: 2rem;
@@ -334,4 +335,5 @@ td {
     word-break: break-word;
     overflow-wrap: break-word;
     max-width: 0;
+    font-size: var(--content-table-font-size);
 }
