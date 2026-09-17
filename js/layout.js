@@ -53,18 +53,18 @@ function initLayout(title) {
             </li>
 
             <li class="nav-item d-flex align-items-center gap-2 ms-3">
-              <button id="font-size-decrease"
-                      class="btn btn-sm btn-outline-secondary"
-                      onclick="decreaseFontSize()"
-                      aria-label="Decrease font size">
-                <i class="fas fa-minus"></i>
-              </button>
-              <span class="small text-muted">حجم الخط</span>
               <button id="font-size-increase"
                       class="btn btn-sm btn-outline-secondary"
                       onclick="increaseFontSize()"
                       aria-label="Increase font size">
                 <i class="fas fa-plus"></i>
+              </button>
+              <span class="small text-muted">حجم الخط</span>
+              <button id="font-size-decrease"
+                      class="btn btn-sm btn-outline-secondary"
+                      onclick="decreaseFontSize()"
+                      aria-label="Decrease font size">
+                <i class="fas fa-minus"></i>
               </button>
             </li>
 
