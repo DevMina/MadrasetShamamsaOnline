@@ -40,14 +40,29 @@
         initLayout('ألحان صوم نينوى والصوم الكبير');
         const sections = [
             { id: '1', name: 'رفع بخور عشية وباكر' },
-            { id: '2', name: 'ألحان قداس الموعوظين' },
-            { id: '3', name: 'ألحان ومردات القداس الباسيلي' },
-            { id: '4', name: 'ألحان ومدائح التوزيع السنوي' },
+            { id: '2', name: 'ألحان ومردات القداس الباسيلي' },
+            { id: '3', name: 'ألحان ومدائح التوزيع' },
         ];
         const items = [
             { s: '1', name: 'الذكصولوجيات', href: 'RafaeBokhor/ZoksologiatElSoomElKber.html' },
             { s: '1', name: 'مردات الإنجيل', href: 'RafaeBokhor/MaradElEngelElSoomElKber.html' },
             { s: '1', name: 'الختام', href: 'RafaeBokhor/ElkhetamElSoomElKber.html' },
+            { s: '2', name: 'الليلويا إي إيه إى إيخون', href: 'Kodas/LahnAlleloya.html' },
+            { s: '2', name: 'سوتيس', href: 'Kodas/SotesNefsenty.html' },
+            { s: '2', name: 'إنثو تي تي شوري', href: 'Kodas/EnsoTeTeShory.html' },
+            { s: '2', name: 'الهيتينيات', href: 'Kodas/Hetanyat.html' },
+            { s: '2', name: 'مرد الإبركسيس', href: 'Kodas/Ebraksis.html' },
+            { s: '2', name: 'مردات إنجيل القداس', href: 'Kodas/MaradEngelKodasElSoomElKber.html' },
+            { s: '2', name: 'اسبازموس آدام', href: 'Kodas/AsbazmosAdamElsoomElKber.html' },
+            { s: '2', name: 'اسبازموس واطس', href: 'Kodas/AsbazmosWatosElsoomElKber.html' },
+            { s: '3', name: 'التوزيع - الصوم الكبير', href: 'Tawzie/TawzieElSoomElKber.html' },
+            { s: '3', name: 'التوزيع - صوم نينوى', href: 'Tawzie/TawzieSoomNenawa.html' },
+            { s: '3', name: 'إك إسماروؤت', href: 'Tawzie/EkEsmaroot.html' },
+            { s: '3', name: 'بي أويك', href: 'Tawzie/BeOik.html' },
+            { s: '3', name: 'مديح اسمعوا يا شعب المسيح', href: 'Tawzie/EsmaaoYaShaabElMaseh.html' },
+            { s: '3', name: 'مديح المجد لمن رفع السموات', href: 'Tawzie/ElMagdLeManRafaaElSamawat.html' },
+            { s: '3', name: 'مديح أبانا الذي في السموات', href: 'Tawzie/AbanaElLazy.html' },
+            { s: '3', name: 'ختام الصلوات', href: 'Tawzie/ElkhetamTawzie.html' },
         ];
         const acc = document.getElementById('sectionsAccordion');
         sections.forEach((sec, i) => {
@@ -59,17 +74,17 @@
                     : `<div class="col-md-4"><div class="card text-center h-100 shadow-sm" style="opacity:.55"><div class="card-body"><h5 class="mb-0 text-muted">${item.name}</h5><span class="badge bg-secondary mt-1">قريباً</span></div></div></div>`
             ).join('');
             acc.innerHTML += `
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button class="accordion-button ${!isFirst ? 'collapsed' : ''}" type="button"
-                    data-bs-toggle="collapse" data-bs-target="#sec${sec.id}" aria-expanded="${isFirst}">
-              <i class="fa-solid fa-cross mx-2"></i>${sec.name}
-            </button>
-          </h2>
-          <div id="sec${sec.id}" class="accordion-collapse collapse ${isFirst ? 'show' : ''}" data-bs-parent="#sectionsAccordion" data-bs-parent="#sectionsAccordion">
-            <div class="accordion-body"><div class="row g-4">${cardsHtml}</div></div>
-          </div>
-        </div>`;
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button ${!isFirst ? 'collapsed' : ''}" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#sec${sec.id}" aria-expanded="${isFirst}">
+                  <i class="fa-solid fa-cross mx-2"></i>${sec.name}
+                </button>
+              </h2>
+              <div id="sec${sec.id}" class="accordion-collapse collapse ${isFirst ? 'show' : ''}" data-bs-parent="#sectionsAccordion" data-bs-parent="#sectionsAccordion">
+                <div class="accordion-body"><div class="row g-4">${cardsHtml}</div></div>
+              </div>
+            </div>`;
         });
     </script>
 </body>
