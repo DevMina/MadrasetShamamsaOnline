@@ -71,8 +71,15 @@
             { s: '3', name: 'توزيع احاد كيهك: اف امبشا غار', href: 'Kiahk/Tawzie/TawzieAhadKiahk.html' },
             { s: '3', name: 'الختام شهر كيهك', href: 'Kiahk/Tawzie/ElkhetamTawzieKiahk.html' },
             // Sections 4-9: no content built yet
-            { s: '4', name: 'ارباع الناقوس برمون الميلاد', href: null },
-            { s: '4', name: 'ذكصولوجيات برمون الميلاد', href: null },
+            { s: '4', name: 'ارباع الناقوس برمون الميلاد', href: 'BaramonElMelad/RafaeBokhor/ArbaeElnakosBaramonElMelad.html' },
+            { s: '4', name: 'ذكصولوجيات برمون الميلاد', href: 'BaramonElMelad/RafaeBokhor/ZoksologiatBaramonElMelad.html' },
+            { s: '4', name: 'المزمور والإنجيل برمون الميلاد', href: 'BaramonElMelad/RafaeBokhor/MazmorEngelBaramonElMelad.html' },
+            { s: '4', name: 'الختام برمون الميلاد', href: 'BaramonElMelad/RafaeBokhor/ElkhetamBaramonElMelad.html' },
+            { s: '5', name: 'مرد الإبركسيس برمون الميلاد', href: 'BaramonElMelad/Kodas/EbraksisBaramonElMelad.html' },
+            { s: '5', name: 'المزمور والإنجيل قداس برمون الميلاد', href: 'BaramonElMelad/Kodas/MazmorEngelBaramonElMelad.html' },
+            { s: '5', name: 'اسبازموس واطس برمون الميلاد', href: 'BaramonElMelad/Kodas/AsbazmosWatosBaramonElMelad.html' },
+            { s: '5', name: 'اسبازموس آدام برمون الميلاد', href: 'BaramonElMelad/Kodas/AsbazmosAdamBaramonElMelad.html' },
+            { s: '6', name: 'الختام التوزيع برمون الميلاد', href: 'BaramonElMelad/Tawzie/ElkhetamTawzieBaramonElMelad.html' },
             { s: '7', name: 'ارباع الناقوس عيد الميلاد', href: null },
             { s: '7', name: 'ذكصولوجيات عيد الميلاد', href: null },
             { s: '7', name: 'المزمور والإنجيل عيد الميلاد', href: null },
@@ -89,17 +96,17 @@
                     : `<div class="col-md-4"><div class="card text-center h-100 shadow-sm card-hover"><div class="card-body"><h5 class="mb-0 text-dark">${item.name}</h5><small class="text-muted">قريباً</small></div></div></div>`
             ).join('');
             acc.innerHTML += `
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button ${!isFirst ? 'collapsed' : ''}" type="button"
-                        data-bs-toggle="collapse" data-bs-target="#sec${sec.id}" aria-expanded="${isFirst}">
-                  <i class="fa-solid fa-cross mx-2"></i>${sec.name}
-                </button>
-              </h2>
-              <div id="sec${sec.id}" class="accordion-collapse collapse ${isFirst ? 'show' : ''}" data-bs-parent="#sectionsAccordion" data-bs-parent="#sectionsAccordion">
-                <div class="accordion-body"><div class="row g-4">${cardsHtml}</div></div>
-              </div>
-            </div>`;
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button ${!isFirst ? 'collapsed' : ''}" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#sec${sec.id}" aria-expanded="${isFirst}">
+                      <i class="fa-solid fa-cross mx-2"></i>${sec.name}
+                    </button>
+                  </h2>
+                  <div id="sec${sec.id}" class="accordion-collapse collapse ${isFirst ? 'show' : ''}" data-bs-parent="#sectionsAccordion" data-bs-parent="#sectionsAccordion">
+                    <div class="accordion-body"><div class="row g-4">${cardsHtml}</div></div>
+                  </div>
+                </div>`;
         });
     </script>
 </body>
