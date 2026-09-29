@@ -2,9 +2,15 @@
  * Shared layout: injects navbar + footer and sets active nav link.
  * Call initLayout(title) at the top of each page's inline script.
  */
+// Work out the site root from where this script was loaded (<root>/js/layout.js),
+// so the site works on GitHub Pages, a custom domain, or when opened locally.
+const _layoutScriptSrc = document.currentScript && document.currentScript.src;
+const _detectedRoot = _layoutScriptSrc
+    ? new URL('..', _layoutScriptSrc).pathname.replace(/\/$/, '')
+    : '/MadrasetShamamsaOnline';
+
 function initLayout(title) {
-    // GitHub Pages project site root
-    const siteRoot = '/MadrasetShamamsaOnline';
+    const siteRoot = _detectedRoot;
 
     // Coptic date
     const copticDate = getCopticDate(new Date());
@@ -113,7 +119,7 @@ function initLayout(title) {
 
             if (
                 href.includes('/Alhan/') &&
-                path.includes('/MadrasetShamamsaOnline/Alhan/')
+                path.startsWith(siteRoot + '/Alhan/')
             ) {
                 link.classList.add('active', 'fw-bold');
                 link.style.color = '#0d6efd';
@@ -121,7 +127,7 @@ function initLayout(title) {
 
             if (
                 href.includes('/EilomElKanesa/') &&
-                path.includes('/MadrasetShamamsaOnline/EilomElKanesa/')
+                path.startsWith(siteRoot + '/EilomElKanesa/')
             ) {
                 link.classList.add('active', 'fw-bold');
                 link.style.color = '#0d6efd';
