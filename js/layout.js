@@ -165,6 +165,20 @@ function jdnToCoptic(jdn) {
     return { day, month: Math.min(month, 13), year };
 }
 
+// Accordion: only one section open at a time, page-wide.
+// Works even when a page has several separate .accordion containers
+// (data-bs-parent alone only closes siblings inside the same container).
+document.addEventListener('show.bs.collapse', function (e) {
+    const target = e.target;
+    if (!target.classList || !target.classList.contains('accordion-collapse')) return;
+
+    document.querySelectorAll('.accordion-collapse.show').forEach(function (open) {
+        // skip the one being opened and any accordion that contains / is contained by it (nested case)
+        if (open === target || open.contains(target) || target.contains(open)) return;
+        bootstrap.Collapse.getOrCreateInstance(open, { toggle: false }).hide();
+    });
+});
+
 // Accordion auto-scroll
 document.addEventListener('DOMContentLoaded', function () {
     document.querySelectorAll('.accordion').forEach(acc => {
